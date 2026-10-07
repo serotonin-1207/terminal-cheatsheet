@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나의 터미널 치트시트</title>
+<style>
+  * { box-sizing: border-box; }
+  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, "Noto Sans KR", sans-serif; margin: 0; padding: 24px; line-height: 1.7; }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 1.8rem; border-bottom: 2px solid #30363d; padding-bottom: 12px; }
+  h1 span { color: #58a6ff; }
+  h2 { color: #7ee787; margin-top: 40px; font-size: 1.3rem; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #30363d; }
+  th { color: #8b949e; font-weight: 600; }
+  code { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 2px 8px; font-family: Consolas, monospace; color: #ffa657; font-size: 0.95em; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px 20px; margin: 12px 0; }
+  .card b { color: #79c0ff; }
+  .q { color: #d2a8ff; font-weight: 700; }
+  footer { margin-top: 48px; color: #8b949e; font-size: 0.85rem; border-top: 1px solid #30363d; padding-top: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>💻 나의 <span>터미널 치트시트</span></h1>
+<p>Muse와의 대화에서 나온 파워셸 · Node.js · Vercel 정리</p>
+
+<h2>⌨️ 파워셸 줄임말</h2>
+<table>
+<tr><th>명령어</th><th>설명</th></tr>
+<tr><td><code>ls</code></td><td>폴더 안 목록 보기</td></tr>
+<tr><td><code>cd 폴더이름</code></td><td>그 폴더로 이동</td></tr>
+<tr><td><code>cd ..</code></td><td>한 단계 위로</td></tr>
+<tr><td><code>pwd</code></td><td>지금 어디 있는지 보기</td></tr>
+<tr><td><code>md 폴더이름</code></td><td>폴더 만들기</td></tr>
+<tr><td><code>rd 폴더이름 /s</code></td><td>폴더 삭제 (휴지통 안 거침!)</td></tr>
+<tr><td><code>del 파일이름</code></td><td>파일 삭제</td></tr>
+<tr><td><code>copy a b</code></td><td>복사</td></tr>
+<tr><td><code>move a b</code></td><td>이동</td></tr>
+<tr><td><code>ren a b</code></td><td>이름 바꾸기</td></tr>
+<tr><td><code>type 파일이름</code></td><td>파일 내용 보기</td></tr>
+<tr><td><code>cls</code></td><td>화면 깨끗이</td></tr>
+</table>
+
+<h2>🟢 Node.js</h2>
+<div class="card">
+<p><span class="q">Q.</span> node는 뭐야?</p>
+<p><b>A.</b> 자바스크립트를 브라우저 밖(터미널, 서버)에서 실행하게 해주는 프로그램. Claude Code 같은 터미널 도구들이 Node 위에서 돌아감.</p>
+</div>
+<div class="card">
+<p><span class="q">Q.</span> 왜 사람들이 많이 쓰지?</p>
+<p><b>A.</b> 웹 개발자가 알던 자바스크립트로 서버까지 만들 수 있어서. npm이라는 거대한 부품 창고도 한몫함.</p>
+</div>
+<div class="card">
+<p><span class="q">Q.</span> 누가 만들었지?</p>
+<p><b>A.</b> 라이언 달(Ryan Dahl), 2009년.</p>
+</div>
+<div class="card">
+<p><span class="q">Q.</span> 내 PC에 깔려 있는지 확인?</p>
+<p><b>A.</b> 파워셸에서 <code>node -v</code> → 버전이 뜨면 설치됨. 발음은 "노드", 뜻은 "마디".</p>
+</div>
+
+<h2>▲ Vercel</h2>
+<div class="card">
+<p><span class="q">Q.</span> Vercel이 뭐야?</p>
+<p><b>A.</b> 웹사이트를 인터넷에 올리는 클라우드 서비스. 코드만 올리면 서버 관리·도메인·HTTPS까지 알아서 됨. Next.js 만든 회사.</p>
+</div>
+<div class="card">
+<p><span class="q">Q.</span> GPT가 주는 웹 링크랑 뭐가 달라?</p>
+<p><b>A.</b> GPT 링크는 미리보기용 임시 페이지(스케치). Vercel은 실제 서비스 운영용(가게). DB·로그인·결제도 붙일 수 있고 사람 몰려도 버팀.</p>
+</div>
+<div class="card">
+<p><span class="q">Q.</span> 유료야?</p>
+<p><b>A.</b> 개인용 Hobby 플랜은 무료. 상업용·대규모는 Pro(약 월 20달러).</p>
+</div>
+<div class="card">
+<p><span class="q">Q.</span> 무료로 얼마나 만들 수 있어?</p>
+<p><b>A.</b> 프로젝트 최대 200개, 월 트래픽 100GB, 하루 배포 100번, 커스텀 도메인 연결 가능. 단, 비상업용만.</p>
+</div>
+
+<footer>2026-10-07 · Muse와의 대화 정리</footer>
+</div>
+</body>
+</html>
